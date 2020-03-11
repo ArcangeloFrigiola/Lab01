@@ -4,25 +4,25 @@ import java.util.Collections;
 import java.util.*;
 import java.util.List;
 
-public class Parole {
-		
-	LinkedList<String> listaParole = new LinkedList<String>();
-	
-	public Parole() {
-		//TODO
+public class ParoleArray {
+
+	ArrayList<String> listaParole = new ArrayList<String>();
+
+	public ParoleArray() {
+		// TODO
 	}
-	
+
 	public void addParola(String p) {
 		listaParole.add(p);
 	}
-	
+
 	public List<String> getElenco() {
-		
-		LinkedList<String> listaParoleOrdinata = new LinkedList<String>(listaParole);
+
+		ArrayList<String> listaParoleOrdinata = new ArrayList<String>(listaParole);
 		Collections.sort(listaParoleOrdinata);
 		return listaParoleOrdinata;
 	}
-	
+
 	public void reset() {
 		listaParole.clear();
 	}
