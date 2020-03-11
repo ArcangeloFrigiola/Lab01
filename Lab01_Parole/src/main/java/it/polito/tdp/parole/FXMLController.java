@@ -57,7 +57,16 @@ public class FXMLController {
     void doInsert(ActionEvent event) {
     	
     	double startTime = System.nanoTime();
+    	
     	String p = this.txtParola.getText();
+    	
+    	String pattern = "[a-zA-Z ]*";
+    	
+    	if(!p.matches(pattern)) {
+    		this.txtResult.appendText("Inserire solo caratteri alfabetici!\n");
+    		this.txtParola.clear();
+    		return;
+    	}
     	elenco.addParola(p);
     	this.txtResult.appendText(p+"\n");
     	this.txtParola.clear();
